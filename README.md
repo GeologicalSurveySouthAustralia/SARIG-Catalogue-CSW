@@ -30,8 +30,10 @@ Multiple data sets from 1892 are incorporated into the catalogue. However, data 
 
 ### How do I search for the latest publications?
 You can filter by publication date on the filter panel.
-!search box
-!GSSA-repo-photos/SARIG catalogue search.jpg
+<p align="center">
+<img src="https://github.com/GeologicalSurveySouthAustralia/SARIG-CSW/blob/a01b64d503085940ab61eb10db7c889d69087ae3/GSSA-repo-photos/SARIG%20catalogue%20search.jpg" width="721px"><br>
+Figure 1: SARIG catalogue search</p>
+
 
 
 ### I would like to download all mineral company reports
