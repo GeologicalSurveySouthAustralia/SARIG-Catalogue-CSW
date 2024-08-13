@@ -8,7 +8,7 @@ For those who want to access and download all reports in one space, we offer a c
 ## UAT links for NEW SARIG catalogue
 https://catalog.uat.sarig.sa.gov.au/
 - https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
-- https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
+-- https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
 
 > **Note:** This is the UAT link for catalogue, pleaase delete "uat." on hoperlink if it has already go alive.
 
@@ -30,14 +30,12 @@ Multiple data sets from 1892 are incorporated into the catalogue. However, data 
 
 ### How do I search for the latest publications?
 You can filter by publication date on the filter panel.
-### IMAGE
-### IMAGE
+!search box
+!GSSA-repo-photos/SARIG catalogue search.jpg
+
 
 ### I would like to download all mineral company reports
 Please refer to the link to our GitHub page for API connection details.
-
-### What web browser should I use?
-*Information to be added.*
 
 ### What tools/software are required to visualise data?
 SARIG supports multiple file types that may require specialist software (GIS).
@@ -78,3 +76,19 @@ SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) fo
 
 ### What query syntax can I use?
 Catalog queries are based on Solr syntax to create complex search queries. Extensive resources can be found online.
+
+
+## License
+
+This code repository's content are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), the deed of which is stored in this repository here: [LICENSE](LICENSE).
+
+
+## Contacts
+**South Australian Resource Information Gateway Team**,
+The Geological Survey of South Australia (GSSA),
+The Department for Energy and Mining (DEM)
+Head office
+Level 4, 11 Waymouth Street
+Adelaide, South Australia 5000
+<Dem.sarig@sa.gov.au>
+
