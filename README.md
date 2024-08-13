@@ -26,13 +26,12 @@ Yes, you can. If a record contains downloadable documents or zip files, clicking
 *Instructions to be added.*
 
 ### How to search for report book?
-*Instructions to be added.*
-
-### What about the data sets from 1892?
 Multiple data sets from 1892 are incorporated into the catalogue. However, data before 2000 may not be available in digital format due to the short timeline of data formats. GSSA runs legacy data programs to fill in gaps in data.
 
 ### How do I search for the latest publications?
 You can filter by publication date on the filter panel.
+### IMAGE
+### IMAGE
 
 ### I would like to download all mineral company reports
 Please refer to the link to our GitHub page for API connection details.
@@ -76,9 +75,6 @@ SARIG catalogue offers logical and comparison operators, as well as arithmetic f
 
 ### What are the Id capabilities of SARIG catalogue?
 SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) for identification purposes.
-
-### Should we include screenshots in any FAQs to aid with explanations?
-Yes, including screenshots, especially when explaining how spatial searches are performed, can be very helpful.
 
 ### What query syntax can I use?
 Catalog queries are based on Solr syntax to create complex search queries. Extensive resources can be found online.
