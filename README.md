@@ -10,7 +10,7 @@ https://catalog.uat.sarig.sa.gov.au/
 - https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
 -- https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
 
-> **Note:** This is the UAT link for catalogue, pleaase delete "uat." on hoperlink if it has already go alive.
+> **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
 
 
 ## What is new?  
