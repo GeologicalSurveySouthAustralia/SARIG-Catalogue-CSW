@@ -85,7 +85,6 @@ SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) fo
 
 
 ## License
-
 This code repository's content are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), the deed of which is stored in this repository here: [LICENSE](LICENSE).
 
 
