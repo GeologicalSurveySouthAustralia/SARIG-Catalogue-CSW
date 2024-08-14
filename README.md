@@ -6,7 +6,7 @@ The Geological Survey of South Australia’s SA Geodata database (the back end t
 For those who want to use API to fetch data in one space, we offer a customised Python notebook and the required accompanying CSV file. These two files are available on this page, in the files listed above.
 
 # SARIG Catalogue CSW UAT URL
-https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
+- CSW v2.0.2 https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
 
 # CKAN API examples
 https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining
@@ -28,7 +28,6 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 ![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
 
 
-
 ### Key Features
 - **Metadata Querying**: Users are allowed to query metadata based on various criteria such as keywords, spatial extent, temporal coverage, and data format.
 - **Standardized Interface**: Follows a standardized interface for consistent communication between clients (such as web applications) and servers (where metadata is stored). Users can find links to other OGC protocols (such as WMS, WFS) to view and download the actual geospatial data.
@@ -47,6 +46,7 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 ## How to run API request using Python?
 - An API call has three parts; the API address, the action requested and any filters on the data to be returned.
 - Please refer to the Jupyter notebook page here:
+- SARIG-Catalogue-CSW
 
 https://github.com/GeologicalSurveySouthAustralia/SARIG-CSW/blob/fc4e169899cf8af5f2e1317c40587166a0117b07/SARIG%20CSW%20Notebook.ipynb
 
