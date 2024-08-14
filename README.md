@@ -50,6 +50,30 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 
 https://github.com/GeologicalSurveySouthAustralia/SARIG-CSW/blob/fc4e169899cf8af5f2e1317c40587166a0117b07/SARIG%20CSW%20Notebook.ipynb
 
+## Requirements
+
+To run this notebook, you need to prepare the following Python packages installed:
+
+- `owslib`: For interacting with OGC web services, including CSW.
+- `requests`: For making HTTP requests.
+- `pandas`: For data manipulation and analysis.
+- `numpy`: For numerical operations.
+
+You can install these packages using pip:
+````python
+!pip install owslib requests pandas numpy
+````
+
+## Usage
+
+1. **Clone the Repository**: Download or clone the repository containing the notebook to your local machine.
+   ```bash
+   git clone <repository_url>
+2. **Open the Notebook** : Launch Jupyter Notebook and open the SARIG_CSW_Notebook.ipynb file.
+3. **Run Notebook on terminal** :jupyter notebook SARIG_CSW_Notebook.ipynb
+4. **Configure the CSW Server URL**: In the notebook, specify the URL of the SARIG CSW server.
+5. **Run the Notebook Cells**: Execute the cells in the notebook to connect to the SARIG CSW server, perform queries, and handle the results.
+
 ## Frequent Asked Question for CSW
 
 ## 1. What did Pre-Update SARIG Open Data and Product Catalogue provide?
