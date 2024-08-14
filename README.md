@@ -23,7 +23,7 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 - **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
 - **Standardization**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
 
-> **Note:** Request functions disabled, please use browser before CSW UAT finished <https://catalog.uat.sarig.sa.gov.au/robots.txt> 
+> **Note:** Request functions disabled <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW UAT finished. 
 
 ![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
 
