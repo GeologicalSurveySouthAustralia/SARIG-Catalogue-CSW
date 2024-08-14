@@ -104,7 +104,7 @@ Spatial and scalar capabilities, SARIG catalogue offers various spatial operator
 ## 9. What scalar capabilities does SARIG catalogue offer?
 SARIG catalogue offers logical and comparison operators, as well as arithmetic functions for filtering.
 
-## 10. What are the Id capabilities of SARIG catalogue?
+## 10. What are the ID capabilities of SARIG catalogue?
 SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) for identification purposes.
 
 
