@@ -47,9 +47,9 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 ## How to run API request using Python?
 - An API call has three parts; the API address, the action requested and any filters on the data to be returned.
 - Please refer to the Jupyter notebook page here:
-- SARIG-Catalogue-CSW
+- SARIG-Catalogue-CSW notebook <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb>
 
-https://github.com/GeologicalSurveySouthAustralia/SARIG-CSW/blob/fc4e169899cf8af5f2e1317c40587166a0117b07/SARIG%20CSW%20Notebook.ipynb
+
 
 ## Requirements
 
