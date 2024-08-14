@@ -69,7 +69,7 @@ You can install these packages using pip:
 
 1. **Clone the Repository**: Download or clone the repository containing the notebook to your local machine.
    ```bash
-   git clone <[repository_url](https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW)>
+   git clone <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW>
 2. **Open the Notebook** : Launch Jupyter Notebook and open the SARIG_CSW_Notebook.ipynb file.
 3. **Run Notebook on terminal** :jupyter notebook SARIG_CSW_Notebook.ipynb
 4. **Configure the CSW Server URL**: In the notebook, specify the URL of the SARIG CSW server.
