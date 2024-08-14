@@ -8,7 +8,7 @@ For those who want to use API to fetch data in one space, we offer a customised 
 # SARIG Catalogue CSW UAT URL
 - CSW v2.0.2 https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
 
-# CKAN API examples
+## CKAN API examples
 https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining
 https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583
 https://catalog.uat.sarig.sa.gov.au/api/action/package_list
