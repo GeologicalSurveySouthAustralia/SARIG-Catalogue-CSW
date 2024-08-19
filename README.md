@@ -45,10 +45,10 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 - **Id Capabilities**: EID, FID
 
 
-## How to run API request using Python?
-- An API call has three parts; the API address, the action requested and any filters on the data to be returned.
-- Please refer to the Jupyter notebook page below to start.
-- Access SARIG CSW from Notebook:  <[https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb](https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/194f46b18ea6665695522dd1600d4b3eb894b6dc/Access%20SARIG%20CSW%20from%20Notebook.ipynb)>
+## How to executing API requests with Python?
+- An API call consists of three components: the API endpoint, the requested action, and any filters applied to the returned data.
+- To get started, please refer to the Jupyter notebook provided below.
+- Accessing SARIG CSW from a Notebook: You can find the notebook at this link.:  <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/194f46b18ea6665695522dd1600d4b3eb894b6dc/Access%20SARIG%20CSW%20from%20Notebook.ipynb>
 
 
 
