@@ -19,15 +19,15 @@ https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
 
 > **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
 
+
 ## ( Draft for UAT Aug 2024) What is new?  
 The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports both 2.0.2 and 3.0.0 versions of the OGC CSW (Catalogue Service for the Web) standard protocol. Benefits: 
 - **Interoperability**: Ensures seamless operation between different systems by adhering to the same protocol.
 - **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
 - **Standardization**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
 
-> **Note:** Request functions disabled <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW UAT finished. 
-
 ![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
+> **Note:** Request functions disabled <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW UAT finished. 
 
 
 ### Key Features
