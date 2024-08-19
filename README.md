@@ -7,7 +7,7 @@ For those who want to use API to fetch data in one space, we offer a customised 
 
 # ( Draft for UAT Aug 2024) SARIG Catalogue CSW URL
 - CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
-- CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=3.0.0&
+- CSW v3.0.0:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=3.0.0&
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
 ## ( Draft for UAT Aug 2024) CKAN API query examples
@@ -47,8 +47,8 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 
 ## How to run API request using Python?
 - An API call has three parts; the API address, the action requested and any filters on the data to be returned.
-- Please refer to the Jupyter notebook page here to start:
-   Access SARIG CSW from Notebook:  <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb>
+- Please refer to the Jupyter notebook page below to start.
+- Access SARIG CSW from Notebook:  <[https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb](https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/194f46b18ea6665695522dd1600d4b3eb894b6dc/Access%20SARIG%20CSW%20from%20Notebook.ipynb)>
 
 
 
