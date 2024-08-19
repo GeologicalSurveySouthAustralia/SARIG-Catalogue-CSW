@@ -1,11 +1,11 @@
-# GSSA SARIG Catalogue CSW
+# ( Draft Aug 2024) GSSA SARIG Catalogue CSW
 
 ## NEW SARIG catalogue and CSW API, JULY 2024
 The Geological Survey of South Australia’s SA Geodata database (the back end to SARIG: https://map.sarig.sa.gov.au/) is the primary repository for geoscientific information in South Australia. SARIG now has the opportunity to release a range of reports that were previously embargoed to the public. The SARIG Catalogue is a comprehensive online resource providing access to a vast collection of the Department for Energy and Mining (DEM) publications. This platform enables users to efficiently search and discover relevant departmental publications, mineral exploration company reports, and data sets. By leveraging advanced search functionality, users can refine their queries based on keywords, geographic location, time period, and data type. The SARIG Catalogue adheres to OGC standard protocols, ensuring seamless interaction between users and the system.
 
 For those who want to use API to fetch data in one space, we offer a customised Python notebook and the required accompanying CSV file. These two files are available on this page, in the files listed above.
 
-# SARIG Catalogue CSW UAT URL
+# ( Draft for UAT Aug 2024) SARIG Catalogue CSW URL
 - CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
