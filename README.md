@@ -78,35 +78,35 @@ You can install these packages using pip:
 
 ## Frequent Asked Question for CSW
 
-## 1. What did Pre-Update SARIG Open Data and Product Catalogue provide?
+### 1. What did Pre-Update SARIG Open Data and Product Catalogue provide?
 SARIG Open Data and Product Catalogue is a platform that utilizes the metadata profile of ISO19115 to enable users to discover and query metadata related to South Australian resources. This includes links to associated resources like web services, maps, publications, or data downloads.
 
-## 2. What are the changes in the updated SARIG catalogue?
+### 2. What are the changes in the updated SARIG catalogue?
 The updated SARIG catalogue now includes additional keywords related to various fields such as geosciences, earth sciences, geology, mining, and archaeology. It supports both 2.0.2 and 3.0.0 versions of the OGC CSW standard protocol and provides a direct link to the Department for Energy and Mining website. Moreover, it specifies that there are no access constraints.
 
-## 3. Where can I access the updated SARIG catalogue?
+### 3. Where can I access the updated SARIG catalogue?
 You can access the updated SARIG catalogue through the following link: 
 (NEW SARIG catalogue)
 
-## 4. What are the benefits of using OGC CSW?
+### 4. What are the benefits of using OGC CSW?
 OGC CSW ensures interoperability between different systems, simplifies metadata discovery processes, and promotes standardization in the geospatial domain.
 
-## 5. What are the key features of the updated SARIG catalogue?
+### 5. What are the key features of the updated SARIG catalogue?
 The updated SARIG catalogue allows users to query metadata based on various criteria such as keywords, spatial extent, temporal coverage, and data format. It also follows a standardized interface for consistent communication between clients and servers.
 
-## 6. What operations can I perform with SARIG catalogue?
+### 6. What operations can I perform with SARIG catalogue?
 You can perform operations such as GetCapabilities, DescribeRecord, GetDomain, GetRecords, GetRecordById, and GetRepositoryItem.
 
-## 7. What are the constraints associated with SARIG catalogue?
+### 7. What are the constraints associated with SARIG catalogue?
 The constraints include MaxRecordDefault set to 10, PostEncoding options of XML and SOAP, and XPathQueryables allowed.
 
-## 8. What capabilities does SARIG catalogue offer?
+### 8. What capabilities does SARIG catalogue offer?
 Spatial and scalar capabilities, SARIG catalogue offers various spatial operators and operands for filtering.
 
-## 9. What scalar capabilities does SARIG catalogue offer?
+### 9. What scalar capabilities does SARIG catalogue offer?
 SARIG catalogue offers logical and comparison operators, as well as arithmetic functions for filtering.
 
-## 10. What are the ID capabilities of SARIG catalogue?
+### 10. What are the ID capabilities of SARIG catalogue?
 SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) for identification purposes.
 
 
