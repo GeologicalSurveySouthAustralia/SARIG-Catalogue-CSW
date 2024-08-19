@@ -7,9 +7,10 @@ For those who want to use API to fetch data in one space, we offer a customised 
 
 # ( Draft for UAT Aug 2024) SARIG Catalogue CSW URL
 - CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
+- CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=3.0.0&
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
-## CKAN API examples
+## ( Draft for UAT Aug 2024) CKAN API query examples
 https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining
 https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583
 https://catalog.uat.sarig.sa.gov.au/api/action/package_list
@@ -18,7 +19,7 @@ https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
 
 > **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
 
-## What is new?  
+## ( Draft for UAT Aug 2024) What is new?  
 The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports both 2.0.2 and 3.0.0 versions of the OGC CSW (Catalogue Service for the Web) standard protocol. Benefits: 
 - **Interoperability**: Ensures seamless operation between different systems by adhering to the same protocol.
 - **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
@@ -46,8 +47,8 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 
 ## How to run API request using Python?
 - An API call has three parts; the API address, the action requested and any filters on the data to be returned.
-- Please refer to the Jupyter notebook page here:
-- SARIG-Catalogue-CSW notebook <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb>
+- Please refer to the Jupyter notebook page here to start:
+   Access SARIG CSW from Notebook:  <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/SARIG%20CSW%20Notebook.ipynb>
 
 
 
