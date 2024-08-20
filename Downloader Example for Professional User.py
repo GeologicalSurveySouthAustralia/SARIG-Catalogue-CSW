@@ -12,6 +12,8 @@ import requests
 import csv
 
 url = "https://catalog.uat.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list"
+# Create download folder if it doesn't exist
+download_folder = "/download"
 
 # Send GET request and handle response
 response = requests.get(url)
@@ -27,9 +29,6 @@ if response.status_code == 200:
   for item in data["result"]:
     package_titles.append(item["data"]["package"]["title"])
 
-  # Create download folder if it doesn't exist
-  import os
-  download_folder = "/download"
   if not os.path.exists(download_folder):
     os.makedirs(download_folder)
 
