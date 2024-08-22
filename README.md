@@ -10,12 +10,27 @@ For those who want to use API to fetch data in one space, we offer a customised 
 - CSW v3.0.0:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=3.0.0&
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
-## ( Draft for UAT Aug 2024) CKAN API query examples
-https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining
-https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583
-https://catalog.uat.sarig.sa.gov.au/api/action/package_list
-https://catalog.uat.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list
-https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show
+## ( Draft for UAT Aug 2024) CKAN API endpoint query examples
+### 1. Package Search by Organization
+- **URL**: Package Search by Organization
+- **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organization.
+
+### 2. Package Search by Name
+- **URL**: Package Search by Name
+- **Description**: This endpoint searches for a specific dataset by its name, in this case, "mesac12583".
+
+### 3. Package List
+- **URL**: Package List
+- **Description**: This endpoint retrieves a list of all available datasets.
+
+### 4. Recently Changed Packages Activity List
+- **URL**: Recently Changed Packages Activity List
+- **Description**: This endpoint provides a list of recently changed datasets, showing the latest updates and modifications.
+
+### 5. Status Show
+- **URL**: Status Show
+- **Description**: This endpoint returns the current status of the CKAN instance, including information about the system's health and configuration.
+
 
 > **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
 
