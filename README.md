@@ -16,19 +16,19 @@ For those who want to use API to fetch data in one space, we offer a customised 
 - **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organization.
 
 ### 2. Package Search by Name
-- **URL**: Package Search by Name
+- **URL**: [Package Search by Name](https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583)
 - **Description**: This endpoint searches for a specific dataset by its name, in this case, "mesac12583".
 
 ### 3. Package List
-- **URL**: Package List
+- **URL**: [Package List](https://catalog.uat.sarig.sa.gov.au/api/action/package_list)
 - **Description**: This endpoint retrieves a list of all available datasets.
 
 ### 4. Recently Changed Packages Activity List
-- **URL**: Recently Changed Packages Activity List
+- **URL**: [Recently Changed Packages Activity List](https://catalog.uat.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list)
 - **Description**: This endpoint provides a list of recently changed datasets, showing the latest updates and modifications.
 
 ### 5. Status Show
-- **URL**: Status Show
+- **URL**: [Status Show](https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show)
 - **Description**: This endpoint returns the current status of the CKAN instance, including information about the system's health and configuration.
 
 
@@ -42,7 +42,7 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 - **Standardization**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
 
 ![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
-> **Note:** Request functions disabled <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW UAT finished. 
+> **Note:** Functions disabled temporarily <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW UAT finished. 
 
 
 ### Key Features
