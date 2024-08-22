@@ -12,7 +12,7 @@ For those who want to use API to fetch data in one space, we offer a customised 
 
 ## ( Draft for UAT Aug 2024) CKAN API endpoint query examples
 ### 1. Package Search by Organization
-- **URL**: Package Search by Organization
+- **URL**: [Package Search by Organization](https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining)
 - **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organization.
 
 ### 2. Package Search by Name
