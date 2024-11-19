@@ -126,7 +126,6 @@ The Geological Survey of South Australia (GSSA),
 The Department for Energy and Mining (DEM)
 
 Head office
-
 Level 4, 11 Waymouth Street, 
 Adelaide, South Australia 5000
 
