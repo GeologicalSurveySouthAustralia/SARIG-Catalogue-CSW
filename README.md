@@ -120,10 +120,15 @@ This code repository's content are licensed under the [Creative Commons Attribut
 
 ## Contacts
 **South Australian Resource Information Gateway Team**,
+
 The Geological Survey of South Australia (GSSA),
+
 The Department for Energy and Mining (DEM)
+
 Head office
-Level 4, 11 Waymouth Street
+
+Level 4, 11 Waymouth Street, 
 Adelaide, South Australia 5000
+
 <Dem.sarig@sa.gov.au>
 
