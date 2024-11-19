@@ -89,7 +89,7 @@ You can install these packages using pip:
 ## Frequent Asked Question for CSW
 
 ### 1. What are the changes in the updated SARIG catalogue?
-The updated SARIG catalogue now includes additional keywords related to various fields such as geosciences, earth sciences, geology, mining, and archaeology. It supports both 2.0.2 and 3.0.0 versions of the OGC CSW standard protocol and provides a direct link to the Department for Energy and Mining website. Moreover, it specifies that there are no access constraints.
+The updated SARIG catalogue now includes additional keywords related to various fields such as earth sciences and mining. It supports both 2.0.2 and 3.0.0 versions of the OGC CSW standard protocol and provides a direct link to the Department for Energy and Mining website. Moreover, it specifies that there are no access constraints.
 
 ### 2. Where can I access the updated SARIG catalogue?
 You can access the updated SARIG catalogue through the following link: 
