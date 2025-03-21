@@ -3,12 +3,41 @@
 ## NEW SARIG catalogue and CSW API
 The SARIG Catalogue is a comprehensive online resource providing access to a vast collection of the Department for Energy and Mining (DEM) publications. This platform enables users to efficiently search and discover relevant departmental publications, mineral exploration company reports, and data sets. By leveraging advanced search functionality, users can refine their queries based on keywords, geographic location, time period, and data type. The SARIG Catalogue adheres to OGC standard protocols, ensuring seamless interaction between users and the system.
 
-For those who want to use APIs to fetch data in one space, we offer customised Python notebooks and Python files. These files are available on this page, in the files listed above.
+# CSW Information
 
-# ( Draft Oct 2024) SARIG Catalogue CSW URL
+## What is CSW?
+
+CSW is an Open Geospatial Consortium (OGC) standard that defines a common interface to discover, browse, and query metadata about geospatial data and services. 
+In simpler terms, it's a way to search for information about maps, datasets, and other geospatial resources. 
+Geological surveys use CSW to provide access to metadata describing their geological data, such as maps, reports, and borehole data.
+
+## Key Concepts
+
+* **Metadata:** This is "data about data." It describes the characteristics of a geospatial resource, like its title, description, spatial extent, and keywords.
+* **OGC Standards:** CSW adheres to OGC standards, ensuring interoperability between different systems. This means you can use various software tools to access CSW services.
+* **Requests:** CSW uses standard requests to interact with the server, such as:
+    * **GetCapabilities:** Retrieves information about the CSW service itself.
+    * **DescribeRecord:** Describes the structure of the metadata records.
+    * **GetRecords:** Searches for metadata records based on specified criteria.
+
+
+# How to Use SARIG Catalogue CSW Server
+
+1.  **Identify the CSW Endpoint:**
+    * You'll need the URL of the CSW service. This is often provided by the geological survey on their website.
+    * For example, you would need to locate the specific CSW endpoint from Geological Survey of South Australia.
 - CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
 - CSW v3.0.0:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=3.0.0&
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
+
+2.  **Use CSW Clients:**
+    * Several software tools can act as CSW clients:
+        * **GIS Software:** ArcGIS, QGIS, and other GIS software often have built-in CSW support.
+        * **Web Browsers:** You can send CSW requests directly through a web browser, although this requires understanding the XML syntax.
+        * **Programming Libraries:** Programming languages like Python have libraries (e.g., `owslib`) that can be used to interact with CSW servers.
+
+For those who want to use APIs to fetch data in one space, we offer customised Python notebooks and Python files. These files are available on this page, in the files listed above.
+
 
 ## ( Draft Oct 2024) CKAN API endpoint query examples
 ### 1. Package Search by Organisation
