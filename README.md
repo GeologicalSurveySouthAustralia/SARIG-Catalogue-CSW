@@ -65,7 +65,7 @@ For those who want to use APIs to fetch data in one space, we offer customised P
 
 
 ## What is new?  
-The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports both 2.0.2 and 3.0.0 versions of the OGC CSW (Catalogue Service for the Web) standard protocol. Some Benefits: 
+The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports 2.0.2 versions of the OGC Catalogue Service for the Web(CSW) standard protocol. Some Benefits: 
 - **Interoperability**: Ensures seamless operation between different systems by adhering to the same protocol.
 - **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
 - **Standardisation**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
@@ -80,7 +80,7 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 
 ### Operations
 - **Operations**: GetCapabilities, DescribeRecord, GetDomain, GetRecords, GetRecordById, GetRepositoryItem
-- **Service and Version**: CSW 2.0.2, 3.0.0
+- **Service and Version**: CSW 2.0.2, 3.0.0(testing)
 - **Constraints**: MaxRecordDefault: 10, PostEncoding: XML, SOAP, XPathQueryables: allowed
 - **Id Capabilities**: EID, FID
 
