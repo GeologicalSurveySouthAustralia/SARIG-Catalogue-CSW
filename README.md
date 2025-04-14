@@ -25,7 +25,7 @@ Geological surveys use CSW to provide access to metadata describing their geolog
 1.  **Identify the CSW Endpoint:**
     * You'll need the URL of the CSW service. This is often provided by the geological survey on their website.
     * For example, you would need to locate the specific CSW endpoint from Geological Survey of South Australia.
-- CSW v2.0.2:  https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&
+- CSW v2.0.2:  [https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&](https://mesac-dev-csw.azurewebsites.net/csw?service=CSW&version=2.0.2&request=GetCapabilities)
 
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
