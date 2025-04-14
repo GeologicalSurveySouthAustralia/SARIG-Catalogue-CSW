@@ -38,7 +38,8 @@ Geological surveys use CSW to provide access to metadata describing their geolog
 For those who want to use APIs to fetch data in one space, we offer customised Python notebooks and Python files. These files are available on this page, in the files listed above.
 
 
-## ( Draft Oct 2024) CKAN API endpoint query examples
+##  CKAN API endpoint query examples
+
 ### 1. Package Search by Organisation
 - **URL**: [Package Search by Organisation](https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining)
 - **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organisation.
@@ -51,9 +52,9 @@ For those who want to use APIs to fetch data in one space, we offer customised P
 - **URL**: [Package List](https://catalog.uat.sarig.sa.gov.au/api/action/package_list)
 - **Description**: This endpoint retrieves a list of all available datasets.
 
-### 4. Recently Changed Packages Activity List
-- **URL**: [Recently Changed Packages Activity List](https://catalog.uat.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list)
-- **Description**: This endpoint provides a list of recently changed datasets, showing the latest updates and modifications.
+### 4. GetRecordByID, Use ID to get the record
+- **URL**: [Example: MESAC3885](https://mesac-dev-csw.azurewebsites.net/csw?service=CSW&version=2.0.2&request=GetRecordById&Id=MESAC3885&outputSchema=http://standards.iso.org/iso/19115/-3/mdb/2.0)
+- **Description**: This endpoint get the record with ID(MESAC3885) by GetRecords and GetRecordByID calls.
 
 ### 5. Status Show
 - **URL**: [Status Show](https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show)
@@ -63,8 +64,8 @@ For those who want to use APIs to fetch data in one space, we offer customised P
 > **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
 
 
-## ( Draft Oct 2024) What is new?  
-The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports both 2.0.2 and 3.0.0 versions of the OGC CSW (Catalogue Service for the Web) standard protocol. Benefits: 
+## What is new?  
+The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports both 2.0.2 and 3.0.0 versions of the OGC CSW (Catalogue Service for the Web) standard protocol. Some Benefits: 
 - **Interoperability**: Ensures seamless operation between different systems by adhering to the same protocol.
 - **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
 - **Standardisation**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
