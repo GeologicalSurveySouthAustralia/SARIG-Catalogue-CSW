@@ -25,7 +25,8 @@ Geological surveys use CSW to provide access to metadata describing their geolog
 1.  **Identify the CSW Endpoint:**
     * You'll need the URL of the CSW service. This is often provided by the geological survey on their website.
     * For example, you would need to locate the specific CSW endpoint from Geological Survey of South Australia.
-- CSW v2.0.2:  [https://catalog.uat.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&](https://mesac-dev-csw.azurewebsites.net/csw?service=CSW&version=2.0.2&request=GetCapabilities)
+- CSW v2.0.2:  [https://catalog.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&](https://catalog.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2)
+
 
 - URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
 
@@ -41,23 +42,23 @@ For those who want to use APIs to fetch data in one space, we offer customised P
 ##  CKAN API endpoint query examples
 
 ### 1. Package Search by Organisation
-- **URL**: [Package Search by Organisation](https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining)
+- **URL**: [Package Search by Organisation](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining)
 - **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organisation.
 
 ### 2. Package Search by Name
-- **URL**: [Package Search by Name](https://catalog.uat.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583)
+- **URL**: [Package Search by Name](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583)
 - **Description**: This endpoint searches for a specific dataset by its name, in this case, "mesac12583".
 
 ### 3. Package List
-- **URL**: [Package List](https://catalog.uat.sarig.sa.gov.au/api/action/package_list)
+- **URL**: [Package List](https://catalog.sarig.sa.gov.au/api/action/package_list)
 - **Description**: This endpoint retrieves a list of all available datasets.
 
 ### 4. GetRecordByID, Use ID to get the record
-- **URL**: [Example: MESAC3885](https://mesac-dev-csw.azurewebsites.net/csw?service=CSW&version=2.0.2&request=GetRecordById&Id=MESAC3885&outputSchema=http://standards.iso.org/iso/19115/-3/mdb/2.0)
+- **URL**: [Example: MESAC3885](https://catalog.sarig.sa.gov.au/csw?service=CSW&version=2.0.2&request=GetRecordById&Id=MESAC3885&outputSchema=http://standards.iso.org/iso/19115/-3/mdb/2.0)
 - **Description**: This endpoint get the record with ID(MESAC3885) by GetRecords and GetRecordByID calls.
 
 ### 5. Status Show
-- **URL**: [Status Show](https://catalog.uat.sarig.sa.gov.au/api/3/action/status_show)
+- **URL**: [Status Show](https://catalog.sarig.sa.gov.au/api/3/action/status_show)
 - **Description**: This endpoint returns the current status of the CKAN instance, including information about the system's health and configuration.
 
 
