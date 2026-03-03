@@ -1,9 +1,9 @@
-# This python script provides an example of how reports and datasets can be downloaded directly form GSSA.
-# User who use this script to download datasets need to prepare their python environment and workspace.
-# 
-# Downloader Example for Professional User.py
+# Example: Download "recently changed dataset activity" from the SARIG Catalogue (CKAN Action API).
+# Note: This script downloads JSON activity metadata (not the dataset files themselves).
+#
+
 # Author: Alex Zou
-# March 2026
+# Date: March 2026
 
 import os
 import requests
@@ -11,7 +11,7 @@ import pandas as pd
 import urllib3
 
 # 1. Setup & Security Bypass
-# Silences the 'InsecureRequestWarning' caused by verify=False
+# Silences the 'InsecureRequestWarning' caused by verify=False (Please make sure you are on controlled network with a known TLS interception proxy)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 2. Configuration
