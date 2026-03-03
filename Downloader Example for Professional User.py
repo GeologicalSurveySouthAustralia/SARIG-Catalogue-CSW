@@ -3,41 +3,56 @@
 # 
 # Downloader Example for Professional User.py
 # Author: Alex Zou
-# Aug 2024
-
+# March 2026
 
 import os
-import json
 import requests
-import csv
+import pandas as pd
+import urllib3
 
-url = "https://catalog.uat.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list"
-# Create download folder if it doesn't exist
-download_folder = "/download"
+# 1. Setup & Security Bypass
+# Silences the 'InsecureRequestWarning' caused by verify=False
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Send GET request and handle response
-response = requests.get(url)
+# 2. Configuration
+URL = "https://catalog.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list"
+FOLDER_NAME = "datafolder"
+FILE_NAME = "sarig_recently_changed_packages_activity.csv"
+FILE_PATH = os.path.join(FOLDER_NAME, FILE_NAME)
 
-if response.status_code == 200:
-  # Parse JSON data
-  data = response.json()
+# Mimic a real browser to avoid 403 Forbidden errors
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+}
 
-  # Create list to store package titles
-  package_titles = []
+# 3. Create the folder if it doesn't exist
+if not os.path.exists(FOLDER_NAME):
+    os.makedirs(FOLDER_NAME)
+    print(f"Created folder: {FOLDER_NAME}")
 
-  # Extract package titles from response
-  for item in data["result"]:
-    package_titles.append(item["data"]["package"]["title"])
+# 4. Fetch the data
+try:
+    print("Connecting to SARIG API...")
+    response = requests.get(URL, headers=HEADERS, verify=False, timeout=15)
+    
+    # Raise an error if the HTTP request failed (e.g., 403, 404, 500)
+    response.raise_for_status()
+    
+    data = response.json()
 
-  if not os.path.exists(download_folder):
-    os.makedirs(download_folder)
+    if data.get('success'):
+        # 5. Process and Save
+        activities = data['result']
+        df = pd.DataFrame(activities)
+        
+        # Save to the specific folder path
+        df.to_csv(FILE_PATH, index=False)
+        print(f"Success! Data saved to: {FILE_PATH}")
+        print(f"Total records retrieved: {len(df)}")
+    else:
+        print("API returned success=False. Check the URL or API status.")
 
-  # Save package titles to CSV file
-  with open(os.path.join(download_folder, "recently_changed_packages.csv"), "w", newline="") as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(["Package Title"])  # Header row
-    writer.writerows(zip(package_titles))  # Write each title as a row
-
-  print("Successfully saved package titles to recently_changed_packages.csv")
-else:
-  print(f"Error: Request failed with status code {response.status_code}")
+except requests.exceptions.HTTPError as err:
+    print(f"HTTP Error occurred: {err}")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
