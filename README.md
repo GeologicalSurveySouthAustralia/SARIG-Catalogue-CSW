@@ -72,7 +72,7 @@ The SARIG Catalogue CSW has undergone significant enhancements to improve user e
 - **Standardisation**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
 
 ![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
-> **Note:** Functions disabled temporarily <https://catalog.uat.sarig.sa.gov.au/robots.txt>, please use browser before CSW activated. 
+> **Note:** Functions disabled temporarily <https://catalog.sarig.sa.gov.au/robots.txt>, please use browser before CSW activated. 
 
 
 ### Key Features
