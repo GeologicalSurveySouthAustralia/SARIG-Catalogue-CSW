@@ -15,6 +15,8 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 2. Configuration
+# You can change the URL to search for gold, return up to 100 rows, IMPORTANT:package_search stores the list in data['result']['results'], please use json_normalize to flatten the nested dictionaries
+# URL = "https://catalog.sarig.sa.gov.au/api/3/action/package_search?q=gold&rows=100"
 URL = "https://catalog.sarig.sa.gov.au/api/3/action/recently_changed_packages_activity_list"
 FOLDER_NAME = "datafolder"
 FILE_NAME = "sarig_recently_changed_packages_activity.csv"
@@ -56,3 +58,4 @@ except requests.exceptions.HTTPError as err:
     print(f"HTTP Error occurred: {err}")
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
+
