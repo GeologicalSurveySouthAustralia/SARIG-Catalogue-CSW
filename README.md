@@ -53,9 +53,11 @@ For those who want to use APIs to fetch data in one space, we offer customised P
 - **URL**: [Package List](https://catalog.sarig.sa.gov.au/api/action/package_list)
 - **Description**: This endpoint retrieves a list of all available datasets.
 
-### 4. GetRecordByID, Use ID to get the record
-- **URL**: [Example: MESAC3885](https://catalog.sarig.sa.gov.au/csw?service=CSW&version=2.0.2&request=GetRecordById&Id=MESAC3885&outputSchema=http://standards.iso.org/iso/19115/-3/mdb/2.0)
-- **Description**: This endpoint get the record with ID(MESAC3885) by GetRecords and GetRecordByID calls.
+### 4. CKAN Action API — search for a dataset by name
+- **URL**: [Example: mesac22353](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=name:mesac22353)
+- **Description**: This CKAN Action API endpoint searches for a dataset whose `name` is `mesac22353`.
+- `/api/action/` is CKAN’s standard API path
+- `package_search` is a standard CKAN action
 
 ### 5. Status Show
 - **URL**: [Status Show](https://catalog.sarig.sa.gov.au/api/3/action/status_show)
