@@ -1,165 +1,141 @@
 # The Geological Survey of South Australia (GSSA) SARIG Catalogue CSW
 
-## NEW SARIG catalogue and CSW API
-The SARIG Catalogue is a comprehensive online resource providing access to a vast collection of the Department for Energy and Mining (DEM) publications. This platform enables users to efficiently search and discover relevant departmental publications, mineral exploration company reports, and data sets. By leveraging advanced search functionality, users can refine their queries based on keywords, geographic location, time period, and data type. The SARIG Catalogue adheres to OGC standard protocols, ensuring seamless interaction between users and the system.
+## Repository scope
 
-# CSW Information
+This repository contains user-facing examples for the SARIG catalogue:
 
-## What is CSW?
+- `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/README.md`
+- `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Access SARIG CSW from Notebook.ipynb`
+- `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Search and Download CSW Data Example.ipynb`
+- `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Downloader Example for Professional User.py`
 
-CSW is an Open Geospatial Consortium (OGC) standard that defines a common interface to discover, browse, and query metadata about geospatial data and services. 
-In simpler terms, it's a way to search for information about maps, datasets, and other geospatial resources. 
-Geological surveys use CSW to provide access to metadata describing their geological data, such as maps, reports, and borehole data.
+The examples cover two interfaces exposed by the SARIG catalogue:
 
-## Key Concepts
+- **OGC CSW** for catalogue metadata discovery
+- **CKAN Action API** for package metadata and file-oriented workflows
 
-* **Metadata:** This is "data about data." It describes the characteristics of a geospatial resource, like its title, description, spatial extent, and keywords.
-* **OGC Standards:** CSW adheres to OGC standards, ensuring interoperability between different systems. This means you can use various software tools to access CSW services.
-* **Requests:** CSW uses standard requests to interact with the server, such as:
-    * **GetCapabilities:** Retrieves information about the CSW service itself.
-    * **DescribeRecord:** Describes the structure of the metadata records.
-    * **GetRecords:** Searches for metadata records based on specified criteria.
+## Verification status
 
-# How to Use SARIG Catalogue CSW Server
+- **Last reviewed:** 2026-06-24
+- **Review scope:** in-repository fact check and context update across documentation, notebooks, and Python example code
+- **Live endpoint verification:** not completed from this environment because `catalog.sarig.sa.gov.au` did not resolve during review
+- **Current guidance:** treat exact service capabilities, limits, and availability as runtime-dependent; confirm them against the live endpoints before depending on them in production workflows
 
-1.  **Identify the CSW Endpoint:**
-    * You'll need the URL of the CSW service. This is often provided by the geological survey on their website.
-    * For example, you would need to locate the specific CSW endpoint from Geological Survey of South Australia.
-- CSW v2.0.2:  [https://catalog.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2&](https://catalog.sarig.sa.gov.au/csw?Request=GetCapabilities&service=CSW&version=2.0.2)
+## CSW information
 
+### What is CSW?
 
-- URL links to capabilities document for a Catalogue Service for the Web (CSW), which is a standard for exposing a catalogue of geospatial records in XML.
+CSW is an Open Geospatial Consortium (OGC) standard that defines a common interface to discover, browse, and query metadata about geospatial data and services.
 
-2.  **Use CSW Clients:**
-    * Several software tools can act as CSW clients:
-        * **GIS Software:** ArcGIS, QGIS, and other GIS software often have built-in CSW support.
-        * **Web Browsers:** You can send CSW requests directly through a web browser, although this requires understanding the XML syntax.
-        * **Programming Libraries:** Programming languages like Python have libraries (e.g., `owslib`) that can be used to interact with CSW servers.
+In simpler terms, it is a way to search for information about maps, datasets, and other geospatial resources. Geological surveys use CSW to publish metadata describing data such as maps, reports, and borehole information.
 
-For those who want to use APIs to fetch data in one space, we offer customised Python notebooks and Python files. These files are available on this page, in the files listed above.
+### Key concepts
 
+- **Metadata:** data about data, such as title, description, extent, and keywords
+- **OGC standards:** common standards that support interoperability between clients and servers
+- **Core requests:** `GetCapabilities`, `DescribeRecord`, `GetDomain`, `GetRecords`, `GetRecordById`, `GetRepositoryItem`
 
-##  CKAN API endpoint query examples
+## How to use the SARIG catalogue services
 
-### 1. Package Search by Organisation
-- **URL**: [Package Search by Organisation](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=organization:department-for-energy-and-mining)
-- **Description**: This endpoint searches for datasets within the "department-for-energy-and-mining" organisation.
+### CSW endpoint
 
-### 2. Package Search by Name
-- **URL**: [Package Search by Name](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=name:mesac12583)
-- **Description**: This endpoint searches for a specific dataset by its name, in this case, "mesac12583".
+- Base endpoint: `https://catalog.sarig.sa.gov.au/csw`
+- Example stable capabilities request: `https://catalog.sarig.sa.gov.au/csw?service=CSW&request=GetCapabilities&version=2.0.2`
+- Repository examples treat **CSW 2.0.2** as the default request version
+- Any **CSW 3.0.0** references in this repository should be treated as evaluation or testing context unless re-verified
 
-### 3. Package List
-- **URL**: [Package List](https://catalog.sarig.sa.gov.au/api/action/package_list)
-- **Description**: This endpoint retrieves a list of all available datasets.
+CSW responses are XML documents. If you call `GetCapabilities` or `GetDomain` from Python, handle the response as XML text or parse it with an XML library instead of expecting JSON.
 
-### 4. CKAN Action API — search for a dataset by name
-- **URL**: [Example: mesac22353](https://catalog.sarig.sa.gov.au/api/action/package_search?fq=name:mesac22353)
-- **Description**: This CKAN Action API endpoint searches for a dataset whose `name` is `mesac22353`.
-- `/api/action/` is CKAN’s standard API path
-- `package_search` is a standard CKAN action
+### CKAN Action API endpoints
 
-### 5. Status Show
-- **URL**: [Status Show](https://catalog.sarig.sa.gov.au/api/3/action/status_show)
-- **Description**: This endpoint returns the current status of the CKAN instance, including information about the system's health and configuration.
+- Base endpoint: `https://catalog.sarig.sa.gov.au/api/3/action/`
+- `package_search`: search package metadata
+- `package_show`: retrieve one package and its resources
+- `package_list`: list package identifiers
+- `status_show`: retrieve CKAN instance status
+- `recently_changed_packages_activity_list`: retrieve recent package activity metadata
 
+The repository examples now use `/api/3/action/` consistently.
 
-> **Note:** This is the test link for catalogue, pleaase delete "uat." on hiperlink if it has already go alive.
+## Included examples
 
+### `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Access SARIG CSW from Notebook.ipynb`
 
-## What is new?  
-The SARIG Catalogue CSW has undergone significant enhancements to improve user experience and accessibility. CSW now supports 2.0.2 versions of the OGC Catalogue Service for the Web(CSW) standard protocol. Some Benefits: 
-- **Interoperability**: Ensures seamless operation between different systems by adhering to the same protocol.
-- **Metadata Discovery**: Simplifies the process of discovering relevant geospatial datasets and services.
-- **Standardisation**: Part of the suite of OGC standards promoting consistency and compatibility in the geospatial domain.
+Notebook examples for:
 
-![image](https://github.com/user-attachments/assets/46fdafec-c626-4bc7-a106-8621755a5ed1)
-> **Note:** Functions disabled temporarily <https://catalog.sarig.sa.gov.au/robots.txt>, please use browser before CSW activated. 
+- retrieving CSW capabilities
+- retrieving CSW domain values
+- understanding CSW use cases
 
+### `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Search and Download CSW Data Example.ipynb`
 
-### Key Features
-- **Metadata Querying**: Users are allowed to query metadata based on various criteria such as keywords, spatial extent, temporal coverage, and data format.
-- **Standardised Interface**: Follows a standardised interface for consistent communication between clients (such as web applications) and servers (where metadata is stored). Users can find links to other OGC protocols (such as WMS, WFS) to view and download the actual geospatial data.
+Notebook examples for:
 
-### Operations
-- **Operations**: GetCapabilities, DescribeRecord, GetDomain, GetRecords, GetRecordById, GetRepositoryItem
-- **Service and Version**: CSW 2.0.2, 3.0.0(testing)
-- **Constraints**: MaxRecordDefault: 10, PostEncoding: XML, SOAP, XPathQueryables: allowed
-- **Id Capabilities**: EID, FID
+- searching CSW records with OWSLib
+- searching CKAN packages by name
+- retrieving package metadata and downloading a resource URL from `package_show`
 
-## How to execute API requests with Python?
-- An API call consists of three components: the API endpoint, the requested action, and any filters applied to the returned data.
-- To get started, please refer to the Jupyter notebook provided below.
-- You can use the notebook at this link:  <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/194f46b18ea6665695522dd1600d4b3eb894b6dc/Access%20SARIG%20CSW%20from%20Notebook.ipynb>
-- You can run this python script: <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW/blob/main/Downloader%20Example%20for%20Professional%20User.py>
+### `/home/runner/work/SARIG-Catalogue-CSW/SARIG-Catalogue-CSW/Downloader Example for Professional User.py`
 
+Python example for downloading **recent package activity metadata** from the CKAN Action API into CSV format.
 
 ## Requirements
 
-To run this notebook, you need to have the following Python packages installed:
+Install the packages required by the examples you want to run:
 
-- `owslib`: For interacting with OGC web services, including CSW.
-- `requests`: For making HTTP requests.
-- `pandas`: For data manipulation and analysis.
-- `numpy`: For numerical operations.
+- `owslib` for CSW notebook examples
+- `requests` for HTTP requests
+- `pandas` for CSV export in the downloader script
 
-You can install these packages using pip:
-````python
-!pip install owslib requests pandas numpy
-````
+Example install command:
 
-## Usage
+```bash
+pip install owslib requests pandas
+```
 
-1. **Clone the Repository**: Download or clone the repository containing the notebook to your local machine.
-   ```bash
-   git clone <https://github.com/GeologicalSurveySouthAustralia/SARIG-Catalogue-CSW>
-2. **Open the Notebook** : Launch Jupyter Notebook and open the SARIG_CSW_Notebook.ipynb file.
-3. **Run Notebook on terminal** :jupyter notebook SARIG_CSW_Notebook.ipynb
-4. **Configure the CSW Server URL**: In the notebook, specify the URL of the SARIG CSW server.
-5. **Run the Notebook Cells**: Execute the cells in the notebook to connect to the SARIG CSW server, perform queries, and handle the results.
+## Usage notes
 
-## Frequent Asked Question for CSW
+1. Clone this repository.
+2. Open the notebook or Python file you want to run.
+3. Confirm the service endpoint and request version you intend to use.
+4. Run the example.
+5. If the live service behavior differs from the example assumptions, update the example before using it in an automated workflow.
 
-### 1. What are the changes in the updated SARIG catalogue?
-The updated SARIG catalogue now includes additional keywords related to various fields such as earth sciences, energy resources and mining. It supports both 2.0.2 and 3.0.0 versions of the OGC CSW standard protocol and provides a direct link to the Department for Energy and Mining website. Moreover, it specifies that there are no access constraints.
+## Fact-check notes applied in this update
 
-### 2. Where can I access the updated SARIG catalogue?
-You can access the updated SARIG catalogue through the following link: 
-(NEW SARIG catalogue)
+- Removed stale operational notes about UAT links and temporary robots-based restrictions.
+- Standardised CKAN examples on `/api/3/action/`.
+- Clarified that CSW examples return XML, not JSON.
+- Aligned download examples with CKAN `package_show` resource handling.
+- Removed hard-coded capability constraints that were not re-verified against a live `GetCapabilities` response during this review.
 
-### 3. What are the benefits of using OGC CSW?
-OGC CSW ensures interoperability between different systems, simplifies metadata discovery processes in the geospatial domain.
+## Re-validation checklist
 
-### 4. What are the key features of the updated SARIG catalogue?
-The updated SARIG catalogue allows users to query metadata based on various criteria such as keywords, spatial extent, temporal coverage, and data format. It also follows a standardised interface for consistent communication between clients and servers.
+Before future releases or example updates, re-check:
 
-### 5. What operations can I perform with SARIG catalogue CSW?
-You can perform operations such as GetCapabilities, DescribeRecord, GetDomain, GetRecords, GetRecordById, and GetRepositoryItem.
-
-### 6. What are the constraints associated with SARIG catalogue CSW?
-The constraints include MaxRecordDefault set to 10, PostEncoding options of XML and SOAP, and XPathQueryables allowed.
-
-### 7. What scalar capabilities does SARIG catalogue CSW offer?
-SARIG catalogue offers logical and comparison operators, as well as arithmetic functions for filtering.
-
-### 8. What are the ID capabilities of SARIG catalogue CSW?
-SARIG catalogue supports EID (Entity Identifier) and FID (Feature Identifier) for identification purposes.
-
+1. CSW base endpoint availability
+2. Supported CSW versions and any production/testing distinction
+3. `GetCapabilities` response structure and constraint values
+4. CKAN Action API base path and action names
+5. Example package identifiers such as `mesac12583` and `2018d036642`
+6. Expected response shapes for `package_search`, `package_show`, and recent activity endpoints
+7. Any network, authentication, proxy, or TLS assumptions documented in example code
 
 ## License
-This code repository's content are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), the deed of which is stored in this repository here: [LICENSE](LICENSE).
 
+This repository content is described as Creative Commons Attribution 4.0 International (CC BY 4.0). Use the canonical license text here:
+
+- <https://creativecommons.org/licenses/by/4.0/>
 
 ## Contacts
-**South Australian Resource Information Gateway Team**,
 
-The Geological Survey of South Australia (GSSA),
+**South Australian Resource Information Gateway Team**
 
+The Geological Survey of South Australia (GSSA)  
 The Department for Energy and Mining (DEM)
 
-Head office
-Level 4, 11 Waymouth Street, 
+Head office  
+Level 4, 11 Waymouth Street  
 Adelaide, South Australia 5000
 
 <Dem.sarig@sa.gov.au>
-
